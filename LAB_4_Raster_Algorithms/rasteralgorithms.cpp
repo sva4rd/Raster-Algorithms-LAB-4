@@ -448,7 +448,6 @@ void RasterAlgorithms::castlePitwayAlgorithm(int x0, int y0, int x1, int y1)
         x = x0;
         y = y0;
         wgt->graph(currentGraph)->addData(steep ? y : x, steep ? x : y);
-        wgt->graph(currentGraph)->addData(x, y);
         while (x < x1)
         {
             x++;
