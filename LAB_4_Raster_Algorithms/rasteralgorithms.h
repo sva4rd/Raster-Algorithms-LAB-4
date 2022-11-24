@@ -57,8 +57,6 @@ private:
 
     int currentGraph;
 
-    QElapsedTimer timer;
-
     QVector<int> xCoord;
     QVector<int> yCoord;
 

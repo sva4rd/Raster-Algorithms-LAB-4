@@ -238,7 +238,6 @@ void RasterAlgorithms::drawPlot()
         lastX0 = x0;
         lastY0 = y0;
         lastR = rad;
-        timer.restart();
         bresenhamCircleAlgorithm(x0, y0, rad);
     }
     else
@@ -248,7 +247,7 @@ void RasterAlgorithms::drawPlot()
         lastX1 = x0 < x1 ? x1 : x0;
         lastY1 = y0 < y1 ? y1 : y0;
         lastR = -1;
-        timer.restart();
+
         if (stepByStepRadBt->isChecked())
             stepAlgorithm(x0, y0, x1, y1);
         else if (cdaRadBt->isChecked())
