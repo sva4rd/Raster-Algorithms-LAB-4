@@ -461,6 +461,20 @@ void RasterAlgorithms::castlePitwayAlgorithm(int x0, int y0, int x1, int y1)
         return;
     }
 
+    else if (y == 0)
+    {
+        x = x0;
+        y = y0;
+        wgt->graph(currentGraph)->addData(steep ? y : x, steep ? x : y);
+        while (x < x1)
+        {
+            x++;
+            wgt->graph(currentGraph)->addData(steep ? y : x, steep ? x : y);
+            wgt->replot();
+        }
+        return;
+    }
+
     QVector<char>m1, m2, temp;
     m1.push_back('s');
     m2.push_back('d');
